@@ -22,3 +22,13 @@ Professional landing page template system with full CMS integration, localizatio
 - And 40+ more configuration files
 
 ## Repository: landing-page-template-20251217_112831
+
+
+## 🚀 Deployment Instructions
+1. Enable GitHub Pages in repository Settings
+2. Select 'main' branch as source
+3. Select '/ (root)' folder
+4. Site will be available at: `https://[username].github.io/[repository]/`
+
+## 🔧 GitHub Pages Configuration
+The `.github/workflows/deploy.yml` file is configured for automatic deployment.
