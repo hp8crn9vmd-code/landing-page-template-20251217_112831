@@ -1,0 +1,384 @@
+{
+  "wireframe": {
+    "total_sections": 7,
+    "compliance_status": "COMPLIANT",
+    "sections": [
+      {
+        "section_id": "global_header",
+        "title": "Global Header & Navigation",
+        "description": "Primary navigation and branding section at the top of every page",
+        "primary_components": [
+          "Logo",
+          "Navigation",
+          "Button"
+        ],
+        "component_config": {
+          "logo": {
+            "component": "Media",
+            "variants": [
+              "full_color",
+              "monochrome_light"
+            ],
+            "required": true,
+            "alt_text_key": "header_logo_alt"
+          },
+          "navigation": {
+            "component": "Navigation",
+            "max_items": 5,
+            "required": true,
+            "i18n_keys": [
+              "nav_link_0",
+              "nav_link_1",
+              "nav_link_2"
+            ]
+          },
+          "button": {
+            "component": "Button",
+            "variant": "primary",
+            "required": true,
+            "i18n_key": "header_cta"
+          }
+        },
+        "copy_notes": "Logo links to homepage. Navigation includes key pages. CTA button for primary conversion path.",
+        "cms_fields": [
+          "header.logo_image",
+          "header.navigation_links[]",
+          "header.cta_text"
+        ],
+        "i18n_keys": [
+          "header_cta",
+          "nav_link_0",
+          "nav_link_1",
+          "nav_link_2",
+          "header_logo_alt"
+        ],
+        "accessibility_notes": "<header> landmark with aria-label. <nav> with role='navigation'. Logo has descriptive alt text.",
+        "performance_note": "Critical. Logo and CSS loaded immediately.",
+        "responsive_breakpoints": {
+          "mobile": "Navigation collapses to hamburger menu",
+          "tablet": "Full navigation visible",
+          "desktop": "Navigation with hover states"
+        },
+        "rtl_considerations": "Logo may need Arabic version. Navigation order reversed for RTL."
+      },
+      {
+        "section_id": "hero",
+        "title": "Hero with Value Proposition",
+        "description": "Main hero section with value proposition and primary call-to-action",
+        "primary_components": [
+          "Hero",
+          "Button"
+        ],
+        "component_config": {
+          "hero": {
+            "component": "Hero",
+            "variants": [
+              "with_video",
+              "with_image",
+              "with_carousel"
+            ],
+            "required": true
+          },
+          "button": {
+            "component": "Button",
+            "variant": "primary_large",
+            "required": true,
+            "i18n_key": "hero_cta"
+          }
+        },
+        "copy_notes": "Clear, benefit-driven headline and subheadline. Single, unambiguous CTA.",
+        "cms_fields": [
+          "hero.headline",
+          "hero.subheadline",
+          "hero.background_video",
+          "hero.background_video_poster",
+          "hero.cta_text"
+        ],
+        "i18n_keys": [
+          "hero_headline",
+          "hero_subheadline",
+          "hero_cta",
+          "hero_background_alt"
+        ],
+        "accessibility_notes": "<section> with aria-label. Video is muted, has aria-label and poster fallback.",
+        "performance_note": "Critical. Poster image is critical; video lazy-loaded.",
+        "responsive_breakpoints": {
+          "mobile": "Stacked layout, smaller font sizes",
+          "tablet": "Medium font sizes, optimized spacing",
+          "desktop": "Full width background, large typography"
+        },
+        "rtl_considerations": "Text alignment right for Arabic. Background media may need mirroring."
+      },
+      {
+        "section_id": "social_proof",
+        "title": "Trust Indicators (Client Logos)",
+        "description": "Section displaying client logos to build trust and credibility",
+        "primary_components": [
+          "LogoGrid"
+        ],
+        "component_config": {
+          "logo_grid": {
+            "component": "LogoGrid",
+            "max_logos": 8,
+            "required": false,
+            "layout": "grid_4x2"
+          }
+        },
+        "copy_notes": "Brief heading above logos. Logos should be recognizable brands or neutral placeholders.",
+        "cms_fields": [
+          "social_proof.heading",
+          "social_proof.logos[]"
+        ],
+        "i18n_keys": [
+          "social_proof_heading",
+          "client_logo_alt_0",
+          "client_logo_alt_1",
+          "client_logo_alt_2",
+          "client_logo_alt_3",
+          "client_logo_alt_4",
+          "client_logo_alt_5",
+          "client_logo_alt_6",
+          "client_logo_alt_7"
+        ],
+        "accessibility_notes": "<section> with aria-label. Each logo image has descriptive alt text.",
+        "performance_note": "Lazy-load. Use loading='lazy' on images.",
+        "responsive_breakpoints": {
+          "mobile": "2 logos per row",
+          "tablet": "4 logos per row",
+          "desktop": "4-8 logos with smooth carousel"
+        },
+        "rtl_considerations": "Grid flow right-to-left for Arabic. Logo order maintained."
+      },
+      {
+        "section_id": "key_features",
+        "title": "Key Features & Benefits",
+        "description": "Section highlighting main product features and benefits",
+        "primary_components": [
+          "FeatureGrid",
+          "FeatureCard"
+        ],
+        "component_config": {
+          "feature_grid": {
+            "component": "FeatureGrid",
+            "max_features": 4,
+            "required": true,
+            "layout": "grid_2x2"
+          },
+          "feature_cards": {
+            "component": "FeatureCard",
+            "instances": 4,
+            "variants": [
+              "icon_top",
+              "icon_left"
+            ],
+            "required": true
+          }
+        },
+        "copy_notes": "3-4 features max. Each has icon, title, one-line benefit description. Focus on 'what you get.'",
+        "cms_fields": [
+          "features[0].icon",
+          "features[0].title",
+          "features[0].description",
+          "features[1].icon",
+          "features[1].title",
+          "features[1].description",
+          "features[2].icon",
+          "features[2].title",
+          "features[2].description",
+          "features[3].icon",
+          "features[3].title",
+          "features[3].description"
+        ],
+        "i18n_keys": [
+          "feature_title_0",
+          "feature_title_1",
+          "feature_title_2",
+          "feature_title_3",
+          "feature_desc_0",
+          "feature_desc_1",
+          "feature_desc_2",
+          "feature_desc_3",
+          "feature_icon_alt_0",
+          "feature_icon_alt_1",
+          "feature_icon_alt_2",
+          "feature_icon_alt_3"
+        ],
+        "accessibility_notes": "<section> with aria-label. Each card is an <article>. Icons are decorative/have alt text.",
+        "performance_note": "Lazy-load. Icons in SVG sprite.",
+        "responsive_breakpoints": {
+          "mobile": "1 feature per row, stacked",
+          "tablet": "2 features per row",
+          "desktop": "2-4 features per row depending on layout"
+        },
+        "rtl_considerations": "Icon position may flip for RTL layouts. Text alignment right."
+      },
+      {
+        "section_id": "social_proof_testimonial",
+        "title": "Customer Testimonial",
+        "description": "Section featuring customer testimonials with quotes and avatars",
+        "primary_components": [
+          "Testimonial"
+        ],
+        "component_config": {
+          "testimonial": {
+            "component": "Testimonial",
+            "instances": 5,
+            "variants": [
+              "with_avatar",
+              "card"
+            ],
+            "required": false
+          }
+        },
+        "copy_notes": "Specific, results-oriented quote. Include full name, title, company. Avatar adds humanity.",
+        "cms_fields": [
+          "testimonials[0].avatar",
+          "testimonials[0].quote",
+          "testimonials[0].author_name",
+          "testimonials[0].author_title",
+          "testimonials[0].company"
+        ],
+        "i18n_keys": [
+          "testimonial_quote_0",
+          "testimonial_author_0",
+          "testimonial_author_title_0",
+          "testimonial_avatar_alt_0"
+        ],
+        "accessibility_notes": "<section> with aria-label. Use <blockquote> and <cite>. Avatar has alt text.",
+        "performance_note": "Lazy-load. Avatar image uses loading='lazy'.",
+        "responsive_breakpoints": {
+          "mobile": "Single testimonial, full width",
+          "tablet": "Testimonial with smaller avatar",
+          "desktop": "Testimonial with carousel for multiple"
+        },
+        "rtl_considerations": "Quote marks may need RTL variants. Avatar position may flip."
+      },
+      {
+        "section_id": "primary_cta_form",
+        "title": "Primary Conversion Form",
+        "description": "Main conversion form for lead generation or sign-ups",
+        "primary_components": [
+          "Form",
+          "Button",
+          "Alert"
+        ],
+        "component_config": {
+          "form": {
+            "component": "Form",
+            "fields": 6,
+            "required": true
+          },
+          "button": {
+            "component": "Button",
+            "variant": "primary_submit",
+            "required": true,
+            "i18n_key": "form_submit_button"
+          },
+          "alert": {
+            "component": "Alert",
+            "variants": [
+              "success",
+              "error"
+            ],
+            "required": false
+          }
+        },
+        "copy_notes": "Minimal form fields. Clear value exchange. Reassurance about privacy/no spam.",
+        "cms_fields": [
+          "form.heading",
+          "form.subheading",
+          "form.fields[0].label",
+          "form.fields[0].placeholder",
+          "form.fields[1].label",
+          "form.fields[1].placeholder",
+          "form.fields[2].label",
+          "form.fields[2].placeholder",
+          "form.fields[3].label",
+          "form.fields[3].placeholder",
+          "form.fields[4].label",
+          "form.fields[4].placeholder",
+          "form.fields[5].label",
+          "form.fields[5].placeholder",
+          "form.submit_button_text",
+          "form.privacy_notice"
+        ],
+        "i18n_keys": [
+          "form_heading",
+          "form_subheading",
+          "form_field_label_0",
+          "form_field_label_1",
+          "form_field_label_2",
+          "form_field_label_3",
+          "form_field_label_4",
+          "form_field_label_5",
+          "form_field_placeholder_0",
+          "form_field_placeholder_1",
+          "form_field_placeholder_2",
+          "form_field_placeholder_3",
+          "form_field_placeholder_4",
+          "form_field_placeholder_5",
+          "form_submit_button",
+          "form_privacy_notice"
+        ],
+        "accessibility_notes": "<section> with aria-label. Inputs have linked <label>. Validation alerts use role='alert'.",
+        "performance_note": "Lazy-load scripts. Form validation loaded asynchronously.",
+        "responsive_breakpoints": {
+          "mobile": "Stacked form fields",
+          "tablet": "Some fields inline if appropriate",
+          "desktop": "Multi-column layout for related fields"
+        },
+        "rtl_considerations": "Form labels right-aligned for Arabic. Placeholder text RTL."
+      },
+      {
+        "section_id": "global_footer",
+        "title": "Global Footer",
+        "description": "Global footer with secondary navigation and copyright",
+        "primary_components": [
+          "Footer",
+          "Logo",
+          "LinkList"
+        ],
+        "component_config": {
+          "footer": {
+            "component": "Footer",
+            "required": true
+          },
+          "logo": {
+            "component": "Media",
+            "variants": [
+              "monochrome_light"
+            ],
+            "required": false,
+            "alt_text_key": "footer_logo_alt"
+          },
+          "link_list": {
+            "component": "LinkList",
+            "max_links": 8,
+            "required": false
+          }
+        },
+        "copy_notes": "Secondary navigation (Terms, Privacy, Blog). Copyright notice. Optional secondary CTA.",
+        "cms_fields": [
+          "footer.logo_image",
+          "footer.navigation_links[]",
+          "footer.copyright_text"
+        ],
+        "i18n_keys": [
+          "footer_copyright",
+          "footer_link_0",
+          "footer_link_1",
+          "footer_link_2",
+          "footer_logo_alt"
+        ],
+        "accessibility_notes": "<footer> landmark. Navigation list with aria-label. Clear link text.",
+        "performance_note": "Low priority. Loads last.",
+        "responsive_breakpoints": {
+          "mobile": "Stacked footer content",
+          "tablet": "Multi-column footer",
+          "desktop": "Full footer with multiple sections"
+        },
+        "rtl_considerations": "Footer layout mirrored for RTL. Links order maintained."
+      }
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+/* Responsive Breakpoints - matching dev checklist */
+:root {
+  /* Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-xxl: 1536px;
+  
+  /* Container widths */
+  --container-sm: 100%;
+  --container-md: 90%;
+  --container-lg: 1200px;
+  --container-xl: 1400px;
+  
+  /* Spacing */
+  --spacing-unit: 8px;
+  --section-spacing: calc(var(--spacing-unit) * 10); /* 80px */
+}
+
+/* Mobile-first media queries */
+@media (min-width: 640px) {
+  .container {
+    max-width: var(--container-sm);
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: var(--container-lg);
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: var(--container-xl);
+  }
+}
+
+/* Example component responsive behavior */
+.hero-section {
+  padding: var(--spacing-unit) * 4;
+  
+  @media (min-width: 768px) {
+    padding: var(--spacing-unit) * 8;
+  }
+  
+  @media (min-width: 1024px) {
+    padding: var(--spacing-unit) * 12;
+  }
+}
+
+.features-grid {
+  display: grid;
+  gap: var(--spacing-unit) * 4;
+  grid-template-columns: 1fr;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

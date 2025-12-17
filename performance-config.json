@@ -1,0 +1,110 @@
+{
+  "performance": {
+    "targets": {
+      "core_web_vitals": {
+        "lcp": {
+          "target": 2.5,
+          "unit": "seconds",
+          "description": "Largest Contentful Paint - loading performance",
+          "measurement": "75th percentile of page loads"
+        },
+        "cls": {
+          "target": 0.1,
+          "unit": "unitless",
+          "description": "Cumulative Layout Shift - visual stability",
+          "measurement": "75th percentile of page loads"
+        },
+        "fid": {
+          "target": 100,
+          "unit": "milliseconds",
+          "description": "First Input Delay - interactivity",
+          "measurement": "75th percentile of page loads"
+        }
+      },
+      "budgets": {
+        "js": {
+          "total": 150,
+          "unit": "KB",
+          "description": "Total JavaScript bundle size",
+          "per_component": "< 30KB"
+        },
+        "css": {
+          "total": 50,
+          "unit": "KB",
+          "description": "Total CSS bundle size",
+          "critical_css": "< 15KB"
+        },
+        "images": {
+          "max_size": 250,
+          "unit": "KB",
+          "description": "Maximum image file size",
+          "format_priority": [
+            "WebP",
+            "AVIF",
+            "JPEG",
+            "PNG"
+          ]
+        }
+      },
+      "loading_strategy": {
+        "above_the_fold": "Load critical resources immediately",
+        "below_the_fold": "Lazy load non-critical resources",
+        "priority_hints": "Use fetchpriority for critical assets"
+      }
+    },
+    "cdn_rules": {
+      "static_asset_ttl": "1 year",
+      "cache_busting": "file fingerprinting (content hash in filename)",
+      "geo_routing": "enabled",
+      "compression": {
+        "brotli": "preferred",
+        "gzip": "fallback"
+      },
+      "image_optimization": {
+        "auto_format": "enabled",
+        "quality": 85,
+        "resizing": "on-demand"
+      }
+    },
+    "optimization_strategies": [
+      {
+        "strategy": "Code splitting",
+        "description": "Split JavaScript by route/component",
+        "implementation": "Dynamic imports for non-critical components"
+      },
+      {
+        "strategy": "Tree shaking",
+        "description": "Remove unused JavaScript/CSS",
+        "implementation": "Configure build tool for dead code elimination"
+      },
+      {
+        "strategy": "Image optimization",
+        "description": "Serve modern formats with proper sizing",
+        "implementation": "srcset with WebP fallbacks, lazy loading"
+      },
+      {
+        "strategy": "Font optimization",
+        "description": "Optimize web font loading",
+        "implementation": "font-display: swap, subset fonts, preload critical fonts"
+      },
+      {
+        "strategy": "Caching strategy",
+        "description": "Implement optimal caching headers",
+        "implementation": "Cache static assets aggressively, API responses appropriately"
+      }
+    ],
+    "monitoring": {
+      "tools": [
+        "Lighthouse",
+        "WebPageTest",
+        "Real User Monitoring (RUM)"
+      ],
+      "frequency": "Weekly automated tests, continuous RUM",
+      "alert_thresholds": {
+        "lcp": "> 3 seconds",
+        "cls": "> 0.15",
+        "js_budget": "> 200KB"
+      }
+    }
+  }
+}

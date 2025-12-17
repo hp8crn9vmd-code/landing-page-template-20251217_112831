@@ -1,0 +1,59 @@
+{
+  "asset_remediation_summary": {
+    "total_assets_requiring_production": 7,
+    "assets": [
+      {
+        "name": "Logos (2 variants)",
+        "requirement": "Need Arabic RTL versions",
+        "deadline_days": 7,
+        "priority": "High"
+      },
+      {
+        "name": "Hero Image",
+        "requirement": "Abstract gradient with focal point metadata",
+        "deadline_days": 7,
+        "priority": "High"
+      },
+      {
+        "name": "Product Screenshot",
+        "requirement": "Arabic UI version required",
+        "deadline_days": 7,
+        "priority": "High"
+      },
+      {
+        "name": "Background Video",
+        "requirement": "Abstract motion loop",
+        "deadline_days": 10,
+        "priority": "Medium"
+      },
+      {
+        "name": "Promo Video",
+        "requirement": "Full localization with Arabic voiceover/subtitles",
+        "deadline_days": 14,
+        "priority": "Medium"
+      },
+      {
+        "name": "Testimonial Avatars",
+        "requirement": "5 diverse AI-generated faces",
+        "deadline_days": 7,
+        "priority": "High"
+      }
+    ],
+    "rtl_swap_requirements": {
+      "must_swap": [
+        "Logos",
+        "Product Screenshots",
+        "Promo Video"
+      ],
+      "can_mirror": [
+        "Hero Image (if directional)",
+        "Abstract patterns"
+      ],
+      "same_asset": [
+        "Background video",
+        "Avatars",
+        "Icons"
+      ]
+    }
+  }
+}

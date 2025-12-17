@@ -1,0 +1,153 @@
+{
+  "seo": {
+    "hreflang_strategy": {
+      "implementation": "subdirectories",
+      "pattern": "example.com/{locale}/{page}",
+      "examples": {
+        "en_us": "https://example.com/en/home",
+        "ar_jo": "https://example.com/ar/home"
+      },
+      "html_implementation": "<link rel=\"alternate\" hreflang=\"en-US\" href=\"https://example.com/en/home\" />\n<link rel=\"alternate\" hreflang=\"ar-JO\" href=\"https://example.com/ar/home\" />\n<link rel=\"alternate\" hreflang=\"x-default\" href=\"https://example.com/en/home\" />",
+      "sitemap_inclusion": true
+    },
+    "meta_templates": {
+      "title": {
+        "template": "{page_title} | {site_name}",
+        "max_length": 60,
+        "default_site_name": "Landing Template Pro",
+        "variables": [
+          "page_title",
+          "site_name",
+          "brand_name"
+        ]
+      },
+      "description": {
+        "template": "{meta_description}",
+        "max_length": 160,
+        "default_description": "A fully customizable landing page template for marketers who value speed and results.",
+        "variables": [
+          "meta_description",
+          "primary_keyword",
+          "value_prop"
+        ]
+      },
+      "robots": {
+        "default": "index, follow",
+        "noindex_pages": [
+          "/preview/",
+          "/draft/",
+          "/admin/"
+        ],
+        "nofollow_pages": [
+          "/external-redirect/"
+        ]
+      },
+      "open_graph": {
+        "og:title": "{page_title}",
+        "og:description": "{meta_description}",
+        "og:image": "{featured_image_url}",
+        "og:type": "website",
+        "og:locale": "{locale}",
+        "og:locale:alternate": [
+          "ar_JO"
+        ]
+      },
+      "twitter_card": {
+        "twitter:card": "summary_large_image",
+        "twitter:title": "{page_title}",
+        "twitter:description": "{meta_description}",
+        "twitter:image": "{featured_image_url}"
+      }
+    },
+    "structured_data": {
+      "json_ld_templates": [
+        {
+          "type": "WebPage",
+          "required": true,
+          "properties": {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "{page_title}",
+            "description": "{meta_description}",
+            "url": "{canonical_url}",
+            "mainEntity": {
+              "@type": "SoftwareApplication",
+              "name": "Landing Template Pro",
+              "applicationCategory": "BusinessApplication"
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "required": false,
+          "trigger": "page has FAQ section",
+          "properties": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "{question_1}",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "{answer_1}"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Organization",
+          "required": true,
+          "properties": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "{company_name}",
+            "url": "{site_url}",
+            "logo": "{logo_url}",
+            "sameAs": [
+              "{social_media_urls}"
+            ]
+          }
+        }
+      ],
+      "breadcrumb_schema": {
+        "enabled": true,
+        "template": {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "{site_url}"
+            }
+          ]
+        }
+      }
+    },
+    "technical_seo": {
+      "canonical_urls": {
+        "enabled": true,
+        "self_referencing": true,
+        "parameter_handling": "ignore_utm_params"
+      },
+      "xml_sitemap": {
+        "enabled": true,
+        "location": "/sitemap.xml",
+        "update_frequency": "weekly",
+        "priority_rules": {
+          "homepage": 1.0,
+          "main_pages": 0.8,
+          "blog_posts": 0.6,
+          "utility_pages": 0.4
+        }
+      },
+      "robots_txt": {
+        "location": "/robots.txt",
+        "content": "User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /preview/\nDisallow: /api/\n\nSitemap: https://example.com/sitemap.xml"
+      }
+    }
+  }
+}

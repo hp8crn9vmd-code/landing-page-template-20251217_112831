@@ -1,0 +1,72 @@
+{
+  "component": "FeatureCard",
+  "props": [
+    {
+      "field_name": "icon",
+      "type": "media",
+      "alt_text_key": "feature_icon_alt_{index}",
+      "required": true,
+      "validation": "image_svg_or_png",
+      "default_value": "feature-icon-{index}.svg",
+      "locale_variants": [
+        "feature-icon-{index}.en.svg",
+        "feature-icon-{index}.ar.svg"
+      ],
+      "dimensions": {
+        "width": 48,
+        "height": 48
+      }
+    },
+    {
+      "field_name": "title",
+      "type": "text",
+      "i18n_key": "feature_title_{index}",
+      "max_length_en": 30,
+      "max_length_ar": 40,
+      "required": true,
+      "validation": "required, max_length",
+      "default_value": "Feature Title"
+    },
+    {
+      "field_name": "description",
+      "type": "richtext",
+      "i18n_key": "feature_desc_{index}",
+      "max_length_en": 120,
+      "max_length_ar": 160,
+      "required": true,
+      "validation": "required, max_length",
+      "default_value": "Feature description goes here."
+    }
+  ],
+  "variants": [
+    {
+      "name": "icon_left",
+      "description": "Icon on left, text on right",
+      "css_classes": [
+        "feature-card--icon-left"
+      ],
+      "layout": "horizontal"
+    },
+    {
+      "name": "icon_top",
+      "description": "Icon on top, text below",
+      "css_classes": [
+        "feature-card--icon-top"
+      ],
+      "layout": "vertical"
+    },
+    {
+      "name": "icon_only",
+      "description": "Icon only with tooltip",
+      "css_classes": [
+        "feature-card--icon-only"
+      ],
+      "props_override": {
+        "description": {
+          "required": false
+        }
+      }
+    }
+  ],
+  "description": "Feature card showing icon, title, and description"
+}

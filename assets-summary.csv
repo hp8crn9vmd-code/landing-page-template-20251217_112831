@@ -1,0 +1,9 @@
+| asset_name | locale_variant | status | final_spec_summary | placeholder_filename |
+|---|---|---|---|---|
+| Logo - Full Color | logo-full-color.en.svg, logo-full-color.ar.svg | MISSING | SVG/PNG, min 40px height, max 100KB, retina required | logo-full-color-placeholder.svg |
+| Logo - Monochrome Light | logo-monochrome-light.en.svg, logo-monochrome-light.ar.svg | MISSING | SVG/PNG, white on transparent, max 80KB, retina required | logo-monochrome-light-placeholder.svg |
+| Hero Image (Stock) | hero-background.en.jpg, hero-background.ar.jpg | MISSING | WebP/JPEG, 1920×1080px, max 250KB, retina, multiple aspect ratios | hero-placeholder-16x9.jpg |
+| Product Screenshot | product-screenshot.en.png, product-screenshot.ar.png | MISSING | PNG with transparency, 1920×1200px, max 200KB, retina required | product-screenshot-placeholder.png |
+| Hero Background Video | hero-video.en.mp4, hero-video.ar.mp4 | MISSING | MP4/WebM, 1920×1080px, 15-30s loop, max 5MB, poster required | hero-video-placeholder.mp4 |
+| Promo Video Clip | promo-video.en.mp4, promo-video.ar.mp4 | MISSING | MP4/WebM, ≤60s, max 10MB, EN/AR captions, poster required | promo-video-placeholder.mp4 |
+| Testimonial Avatar Set | avatar-0.en.jpg, avatar-0.ar.jpg | MISSING | WebP/JPEG, 100×100px circular, max 50KB each, retina required | avatar-placeholder-0.jpg |

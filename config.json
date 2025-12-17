@@ -1,0 +1,54 @@
+{
+  "project": {
+    "name": "Landing Page Template System",
+    "version": "1.0.0",
+    "description": "A production-ready landing page template system that gives marketers full visual control over design and content",
+    "created_date": "2025-12-17T10:46:17.532179",
+    "last_updated": "2025-12-17T10:46:17.532218",
+    "status": "development",
+    "roadmap_compliance": "Phases 1-3 completed"
+  },
+  "goal": "Drive qualified demo/sign-up form submissions via a template that non-technical marketers can fully customize—including copy, images, colors, and behaviors—without developer intervention.",
+  "value_proposition": "A production-ready landing page template system that gives marketers full visual control over design and content, enabling rapid, safe customization and deployment without code.",
+  "personas": [
+    {
+      "name": "Maya",
+      "summary": "Marketing Manager launching campaigns independently. Needs intuitive visual controls, real-time previews, and scheduled publishing without developer help.",
+      "word_count": 20
+    },
+    {
+      "name": "Alex",
+      "summary": "Freelance Developer building for self-managing clients. Requires clear CMS schema, secure theme overrides, and clean integration hooks.",
+      "word_count": 20
+    },
+    {
+      "name": "Taylor",
+      "summary": "Content Editor responsible for updates and localization. Requires WYSIWYG editing, media replacement, approval workflows, and translation tools.",
+      "word_count": 20
+    }
+  ],
+  "headlines": [
+    "Edit your landing page, live. No code required.",
+    "Drag, drop, publish. Convert faster.",
+    "Your brand, your rules. Change anything.",
+    "The template that adapts to your campaign.",
+    "Launch in minutes, edit in seconds."
+  ],
+  "hero_variants": [
+    {
+      "headline": "Launch higher-converting campaigns, faster.",
+      "subheadline": "A professional template system for marketers who value speed and results.",
+      "cta": "Start Building Now"
+    },
+    {
+      "headline": "Your brand, built to convert.",
+      "subheadline": "Customizable, conversion-optimized layouts that put your product in the spotlight.",
+      "cta": "See Templates"
+    },
+    {
+      "headline": "Trusted by 5000+ marketing teams.",
+      "subheadline": "The modular template that scales from first click to final conversion.",
+      "cta": "Get Started Free"
+    }
+  ]
+}

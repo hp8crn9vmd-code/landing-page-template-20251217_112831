@@ -1,0 +1,85 @@
+{
+  "design_tokens": {
+    "colors": {
+      "primary": {
+        "base": "#0066FF",
+        "hover": "#0052CC",
+        "active": "#003D99"
+      },
+      "alert": {
+        "info": "#E6F2FF",
+        "success": "#E6F7ED",
+        "warning": "#FFF4E6",
+        "error": "#FBEBEB"
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "sans": "Inter, system-ui"
+      }
+    },
+    "spacing": {
+      "unit": 8
+    },
+    "buttons": {
+      "primary": {
+        "bg": "colors.primary.base",
+        "text": "white"
+      },
+      "borderRadius": 4
+    },
+    "animations": {
+      "durations": {
+        "fast": 150,
+        "medium": 300,
+        "slow": 500
+      },
+      "easing": {
+        "default": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "bounce": "cubic-bezier(0.68, -0.55, 0.27, 1.55)"
+      }
+    }
+  },
+  "theme_tokens": {
+    "colors": {
+      "primary": {
+        "default": "#0066FF",
+        "hover": "#0052CC"
+      },
+      "secondary": {
+        "default": "#FF6B6B",
+        "hover": "#E05555"
+      },
+      "background": {
+        "default": "#FFFFFF",
+        "alt": "#F8F9FA"
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "sans": "Inter, system-ui, sans-serif"
+      },
+      "scale": {
+        "base": "16px",
+        "h1": "2.5rem",
+        "h2": "2rem"
+      }
+    },
+    "spacing": {
+      "unit": 8,
+      "section": 80
+    },
+    "buttons": {
+      "borderRadius": {
+        "sm": 2,
+        "md": 4,
+        "lg": 8
+      },
+      "padding": {
+        "sm": "8px 16px",
+        "md": "12px 24px",
+        "lg": "16px 32px"
+      }
+    }
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "assets": [
+    {
+      "asset_name": "Logo - Full Color",
+      "locale_variants": [
+        "logo-full-color.en.svg",
+        "logo-full-color.ar.svg"
+      ],
+      "status": "MISSING",
+      "final_spec": {
+        "format": "SVG (primary), PNG (fallback)",
+        "dimensions": "min_height: 40px, width: variable",
+        "aspect_ratio": "flexible (3:1 horizontal recommended)",
+        "max_file_size_bytes": 102400,
+        "retina_required": true,
+        "poster_required": false
+      },
+      "placeholder": {
+        "filename_example": "logo-full-color-placeholder.svg",
+        "description": "Geometric shape with 'BRAND' text in neutral typeface",
+        "sample_data_uri_optional": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiIGZpbGw9IiMwMDY2RkYiLz48dGV4dCB4PSI2MCIgeT0iMjgiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2EiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5CUkFORDwvdGV4dD48L3N2Zz4="
+      },
+      "focal_point_example": {
+        "x": 50,
+        "y": 50
+      },
+      "rtl_swap_required": true,
+      "delivery_recommendation": {
+        "owner_role": "design",
+        "deadline_days": 7
+      }
+    },
+    {
+      "asset_name": "Logo - Monochrome Light",
+      "locale_variants": [
+        "logo-monochrome-light.en.svg",
+        "logo-monochrome-light.ar.svg"
+      ],
+      "status": "MISSING",
+      "final_spec": {
+        "format": "SVG (primary), PNG (fallback)",
+        "dimensions": "min_height: 40px, width: variable",
+        "aspect_ratio": "same as full color logo",
+        "max_file_size_bytes": 81920,
+        "retina_required": true,
+        "poster_required": false
+      },
+      "placeholder": {
+        "filename_example": "logo-monochrome-light-placeholder.svg",
+        "description": "Monochrome version of placeholder logo (white on transparent)",
+        "sample_data_uri_optional": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiIGZpbGw9IiNGRkZGRkYiLz48dGV4dCB4PSI2MCIgeT0iMjgiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2EiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiMwMDY2RkYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkJSQU5EPC90ZXh0Pjwvc3ZnPg=="
+      },
+      "focal_point_example": {
+        "x": 50,
+        "y": 50
+      },
+      "rtl_swap_required": true,
+      "delivery_recommendation": {
+        "owner_role": "design",
+        "deadline_days": 7
+      }
+    },
+    {
+      "asset_name": "Hero Image (Stock)",
+      "locale_variants": [
+        "hero-background.en.jpg",
+        "hero-background.ar.jpg"
+      ],
+      "status": "MISSING",
+      "final_spec": {
+        "format": "WebP (primary), JPEG (fallback)",
+        "dimensions": "1920\u00d71080px (16:9), 2560\u00d71080px (21:9)",
+        "aspect_ratio": "16:9, 21:9, 1:1",
+        "max_file_size_bytes": 256000,
+        "retina_required": true,
+        "poster_required": false
+      },
+      "placeholder": {
+        "filename_example": "hero-placeholder-16x9.jpg",
+        "description": "Abstract gradient with geometric overlays, no human faces or text",
+        "sample_data_uri_optional": null
+      },
+      "focal_point_example": {
+        "x": 35,
+        "y": 50
+      },
+      "rtl_swap_required": false,
+      "delivery_recommendation": {
+        "owner_role": "design",
+        "deadline_days": 7
+      }
+    },
+    {
+      "asset_name": "Product Screenshot",
+      "locale_variants": [
+        "product-screenshot.en.png",
+        "product-screenshot.ar.png"
+      ],
+      "status": "MISSING",
+      "final_spec": {
+        "format": "PNG with transparency",
+        "dimensions": "1920x1200px (16:10)",
+        "aspect_ratio": "16:10",
+        "max_file_size_bytes": 204800,
+        "retina_required": true,
+        "poster_required": false
+      },
+      "placeholder": {
+        "filename_example": "product-screenshot-placeholder.png",
+        "description": "Mock dashboard UI with placeholder charts, metrics, and neutral labels",
+        "sample_data_uri_optional": null
+      },
+      "focal_point_example": {
+        "x": 50,
+        "y": 40
+      },
+      "rtl_swap_required": true,
+      "delivery_recommendation": {
+        "owner_role": "design",
+        "deadline_days": 7
+      }
+    },
+    {
+      "asset_name": "Hero Background Video",
+      "locale_variants": [
+        "hero-video.en.mp4",
+        "hero-video.ar.mp4"
+      ],
+      "status": "MISSING",
+      "final_spec": {
+        "format": "H.264 MP4 (primary), VP9 WebM (fallback)",
+        "dimensions": "1920x1080px",
+        "aspect_ratio": "16:9",
+        "max_file_size_bytes": 5242880,
+        "retina_required": false,
+        "poster_required": true
+      },
+      "placeholder": {
+        "filename_example": "hero-video-placeholder.mp4",
+        "description": "Looping abstract motion graphic with color shifts, no text or branding",
+        "sample_data_uri_optional": null
+      },
+      "focal_point_example": {
+        "x": 50,
+        "y": 50
+      },
+      "rtl_swap_required": false,
+      "delivery_recommendation": {
+        "owner_role": "design",
+        "deadline_days": 10
+      }
+    },
+    {
+      "asset_name": "Promo Video Clip",
+      "locale_variants": [
+        "promo-video.en.mp4",
+        "promo-video.ar.mp4"
+      ],
+      "status": "MISSING",
+      "final_spec": {
+        "format": "H.264 MP4 (primary), WebM (fallback)",
+        "dimensions": "1920\u00d71080px",
+        "aspect_ratio": "16:9",
+        "max_file_size_bytes": 10485760,
+        "retina_required": false,
+        "poster_required": true
+      },
+      "placeholder": {
+        "filename_example": "promo-video-placeholder.mp4",
+        "description": "Silent motion graphic with 'Video placeholder' text overlay",
+        "sample_data_uri_optional": null
+      },
+      "focal_point_example": {
+        "x": 50,
+        "y": 50
+      },
+      "rtl_swap_required": true,
+      "delivery_recommendation": {
+        "owner_role": "design",
+        "deadline_days": 14
+      }
+    },
+    {
+      "asset_name": "Testimonial Avatar Set",
+      "locale_variants": [
+        "avatar-0.en.jpg",
+        "avatar-0.ar.jpg"
+      ],
+      "status": "MISSING",
+      "final_spec": {
+        "format": "WebP (primary), JPEG (fallback)",
+        "dimensions": "100x100px (circular crop)",
+        "aspect_ratio": "1:1",
+        "max_file_size_bytes": 51200,
+        "retina_required": true,
+        "poster_required": false
+      },
+      "placeholder": {
+        "filename_example": "avatar-placeholder-0.jpg",
+        "description": "AI-generated neutral faces with solid color backgrounds, diverse representation",
+        "sample_data_uri_optional": null
+      },
+      "focal_point_example": {
+        "x": 50,
+        "y": 50
+      },
+      "rtl_swap_required": false,
+      "delivery_recommendation": {
+        "owner_role": "design",
+        "deadline_days": 7
+      }
+    }
+  ]
+}

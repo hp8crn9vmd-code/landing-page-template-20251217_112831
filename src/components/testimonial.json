@@ -1,0 +1,79 @@
+{
+  "component": "Testimonial",
+  "props": [
+    {
+      "field_name": "avatar",
+      "type": "media",
+      "alt_text_key": "testimonial_avatar_alt_{index}",
+      "required": false,
+      "validation": "image_circular",
+      "default_value": null,
+      "locale_variants": [
+        "avatar-{index}.en.jpg",
+        "avatar-{index}.ar.jpg"
+      ],
+      "dimensions": {
+        "width": 100,
+        "height": 100,
+        "crop": "circle"
+      }
+    },
+    {
+      "field_name": "quote",
+      "type": "richtext",
+      "i18n_key": "testimonial_quote_{index}",
+      "max_length_en": 200,
+      "max_length_ar": 250,
+      "required": true,
+      "validation": "max_length",
+      "default_value": "Customer testimonial quote goes here."
+    },
+    {
+      "field_name": "author_name",
+      "type": "text",
+      "i18n_key": "testimonial_author_{index}",
+      "max_length_en": 50,
+      "max_length_ar": 60,
+      "required": true,
+      "validation": "required, max_length",
+      "default_value": "Customer Name"
+    },
+    {
+      "field_name": "author_title",
+      "type": "text",
+      "i18n_key": "testimonial_author_title_{index}",
+      "max_length_en": 50,
+      "max_length_ar": 60,
+      "required": false,
+      "validation": "max_length",
+      "default_value": "Job Title"
+    }
+  ],
+  "variants": [
+    {
+      "name": "with_avatar",
+      "description": "Testimonial with avatar image",
+      "css_classes": [
+        "testimonial--with-avatar"
+      ],
+      "requires_avatar": true
+    },
+    {
+      "name": "card",
+      "description": "Testimonial in card layout",
+      "css_classes": [
+        "testimonial--card"
+      ],
+      "has_background": true
+    },
+    {
+      "name": "simple",
+      "description": "Simple testimonial without card",
+      "css_classes": [
+        "testimonial--simple"
+      ],
+      "has_background": false
+    }
+  ],
+  "description": "Customer testimonial with quote, author, and avatar"
+}

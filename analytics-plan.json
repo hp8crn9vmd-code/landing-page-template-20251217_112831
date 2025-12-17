@@ -1,0 +1,171 @@
+{
+  "analytics_plan": {
+    "tracking_platform": "Google Analytics 4 + Custom Events",
+    "events": [
+      {
+        "name": "logo_click",
+        "description": "User clicks on the logo",
+        "properties": [
+          "location"
+        ],
+        "triggers": [
+          "click on .logo-link"
+        ],
+        "importance": "medium"
+      },
+      {
+        "name": "video_play",
+        "description": "User plays a video",
+        "properties": [
+          "video_name",
+          "trigger",
+          "playback_time"
+        ],
+        "triggers": [
+          "play event on video element",
+          "autoplay start"
+        ],
+        "importance": "high"
+      },
+      {
+        "name": "cta_click",
+        "description": "User clicks any call-to-action button",
+        "properties": [
+          "button_text",
+          "location",
+          "section"
+        ],
+        "triggers": [
+          "click on .cta-button, .hero-cta, .submit-button"
+        ],
+        "importance": "critical"
+      },
+      {
+        "name": "form_submission",
+        "description": "User submits the conversion form",
+        "properties": [
+          "form_id",
+          "status",
+          "field_count",
+          "time_to_complete"
+        ],
+        "triggers": [
+          "submit event on .conversion-form"
+        ],
+        "importance": "critical"
+      },
+      {
+        "name": "form_field_interaction",
+        "description": "User interacts with form fields",
+        "properties": [
+          "field_name",
+          "interaction_type",
+          "time_spent"
+        ],
+        "triggers": [
+          "focus, blur, change on form inputs"
+        ],
+        "importance": "medium"
+      },
+      {
+        "name": "scroll_depth",
+        "description": "User scrolls through the page",
+        "properties": [
+          "depth_percentage",
+          "sections_viewed"
+        ],
+        "triggers": [
+          "25%, 50%, 75%, 100% scroll thresholds"
+        ],
+        "importance": "medium"
+      },
+      {
+        "name": "section_view",
+        "description": "User views a section (via Intersection Observer)",
+        "properties": [
+          "section_id",
+          "view_time",
+          "scroll_direction"
+        ],
+        "triggers": [
+          "section enters viewport"
+        ],
+        "importance": "low"
+      },
+      {
+        "name": "alert_dismiss",
+        "description": "User dismisses an alert/notification",
+        "properties": [
+          "alert_type",
+          "display_time"
+        ],
+        "triggers": [
+          "click on .alert-close"
+        ],
+        "importance": "low"
+      }
+    ],
+    "kpis": [
+      {
+        "name": "Page View",
+        "description": "Total page views",
+        "calculation": "Count of page_view events",
+        "target": "N/A - baseline metric"
+      },
+      {
+        "name": "Video Play Rate",
+        "description": "Percentage of users who play video",
+        "calculation": "video_play events / page_view events",
+        "target": "\u2265 40%"
+      },
+      {
+        "name": "CTA Click-Through Rate",
+        "description": "Percentage of users who click CTAs",
+        "calculation": "cta_click events / page_view events",
+        "target": "\u2265 5%"
+      },
+      {
+        "name": "Form Submission Rate",
+        "description": "Percentage of users who submit form",
+        "calculation": "form_submission events / page_view events",
+        "target": "\u2265 3%"
+      },
+      {
+        "name": "Conversion Rate",
+        "description": "Percentage of form submissions that convert",
+        "calculation": "conversions / form_submission events",
+        "target": "\u2265 20%"
+      },
+      {
+        "name": "Average Session Duration",
+        "description": "Average time users spend on page",
+        "calculation": "Mean of session duration",
+        "target": "\u2265 2 minutes"
+      },
+      {
+        "name": "Bounce Rate",
+        "description": "Percentage of single-page sessions",
+        "calculation": "Single-page sessions / total sessions",
+        "target": "\u2264 40%"
+      }
+    ],
+    "implementation_notes": {
+      "privacy": "Respect DNT headers, GDPR compliance required",
+      "data_retention": "26 months for analytics data",
+      "data_ownership": "Customer owns their analytics data",
+      "testing": "Test in development/staging before production",
+      "documentation": "Maintain data dictionary for all events/properties"
+    },
+    "a_b_testing_integration": {
+      "supported": true,
+      "parameters": [
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "utm_content",
+        "experiment_id"
+      ],
+      "event_enrichment": "Add experiment data to all tracking events"
+    }
+  }
+}

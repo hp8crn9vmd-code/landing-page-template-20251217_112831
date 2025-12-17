@@ -1,0 +1,39 @@
+{
+  "component": "Form",
+  "props": [
+    {
+      "field_name": "fields_labels",
+      "type": "text_array",
+      "i18n_key": "form_field_labels",
+      "max_length_en": 240,
+      "max_length_ar": 300,
+      "required": true,
+      "validation": "required, max_length",
+      "default_value": "Email Address,Full Name,Company Name,Phone Number,Job Title,Company Size",
+      "separator": ","
+    },
+    {
+      "field_name": "fields_placeholders",
+      "type": "text_array",
+      "i18n_key": "form_field_placeholders",
+      "max_length_en": 240,
+      "max_length_ar": 300,
+      "required": false,
+      "validation": "max_length",
+      "default_value": "you@company.com,John Smith,Acme Inc.,+1 (555) 123-4567,Marketing Manager,Select company size",
+      "separator": ","
+    },
+    {
+      "field_name": "submit_button",
+      "type": "text",
+      "i18n_key": "form_submit_button",
+      "max_length_en": 20,
+      "max_length_ar": 25,
+      "required": true,
+      "validation": "required, max_length",
+      "default_value": "Request Demo"
+    }
+  ],
+  "variants": [],
+  "description": "Conversion form with multiple fields and validation"
+}

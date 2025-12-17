@@ -1,0 +1,162 @@
+{
+  "integrations": [
+    {
+      "name": "HubSpot CRM",
+      "type": "crm",
+      "status": "supported",
+      "authentication": {
+        "method": "OAuth 2.0",
+        "scopes": [
+          "contacts",
+          "forms",
+          "timeline"
+        ]
+      },
+      "mapping_example": {
+        "form_fields": {
+          "email": "HubSpot property 'email'",
+          "full_name": "HubSpot property 'firstname' + 'lastname'",
+          "company": "HubSpot property 'company'",
+          "phone": "HubSpot property 'phone'",
+          "job_title": "HubSpot property 'jobtitle'",
+          "company_size": "Custom property 'company_size'"
+        },
+        "utm_parameters": {
+          "utm_source": "HubSpot property 'hs_utm_source'",
+          "utm_medium": "HubSpot property 'hs_utm_medium'",
+          "utm_campaign": "HubSpot property 'hs_utm_campaign'",
+          "utm_content": "HubSpot property 'hs_utm_content'",
+          "utm_term": "HubSpot property 'hs_utm_term'"
+        },
+        "timeline_events": {
+          "form_submission": "Create timeline event for form submission",
+          "page_view": "Optional: Track page views as engagements"
+        }
+      },
+      "webhook_configuration": {
+        "endpoint": "https://api.hubapi.com/forms/v2/submissions/:form_guid",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer {access_token}"
+        },
+        "payload_template": {
+          "submittedAt": "{timestamp}",
+          "fields": [
+            {
+              "name": "email",
+              "value": "{email}"
+            }
+          ],
+          "context": {
+            "pageUri": "{page_url}",
+            "pageName": "{page_title}"
+          }
+        }
+      },
+      "testing_requirements": [
+        "Test form submission creates contact in HubSpot",
+        "Verify UTM parameters are captured",
+        "Test duplicate contact handling",
+        "Validate error handling for failed submissions"
+      ]
+    },
+    {
+      "name": "Generic Webhook",
+      "type": "webhook",
+      "status": "supported",
+      "authentication": {
+        "methods": [
+          "API Key",
+          "Bearer Token",
+          "Basic Auth",
+          "None"
+        ]
+      },
+      "mapping_example": {
+        "endpoint": "POST to configured URL",
+        "payload": {
+          "event": "form_submit",
+          "tenant": "{tenant_slug}",
+          "timestamp": "{iso_timestamp}",
+          "form_data": {
+            "email": "{email}",
+            "name": "{name}",
+            "company": "{company}"
+          },
+          "utm": {
+            "source": "{utm_source}",
+            "medium": "{utm_medium}",
+            "campaign": "{utm_campaign}"
+          },
+          "page_info": {
+            "url": "{page_url}",
+            "title": "{page_title}",
+            "locale": "{locale}"
+          }
+        }
+      },
+      "configuration_options": {
+        "headers": "Custom headers configurable in admin",
+        "retry_policy": "3 retries with exponential backoff",
+        "timeout": "10 seconds",
+        "success_codes": [
+          200,
+          201,
+          202,
+          204
+        ]
+      },
+      "error_handling": {
+        "log_failures": true,
+        "notification": "Email admin after 5 consecutive failures",
+        "fallback": "Store failed submissions for later processing"
+      }
+    },
+    {
+      "name": "Zapier / Make",
+      "type": "automation",
+      "status": "supported",
+      "description": "Integration with no-code automation platforms",
+      "webhook_trigger": {
+        "event": "form_submission",
+        "available_data": [
+          "form_data",
+          "utm_params",
+          "page_info",
+          "user_agent"
+        ]
+      },
+      "supported_actions": [
+        "Google Sheets append row",
+        "Slack notification",
+        "Email sending",
+        "CRM updates",
+        "Database writes"
+      ]
+    },
+    {
+      "name": "Google Analytics 4",
+      "type": "analytics",
+      "status": "supported",
+      "implementation": {
+        "measurement_id": "G-XXXXXXXXXX",
+        "events": "Map to analytics plan events",
+        "user_properties": {
+          "tenant": "{tenant_slug}",
+          "locale": "{locale}",
+          "subscription_tier": "{tier}"
+        }
+      },
+      "data_layer": {
+        "enabled": true,
+        "events": [
+          "page_view",
+          "form_submission",
+          "cta_click",
+          "video_play"
+        ]
+      }
+    }
+  ]
+}

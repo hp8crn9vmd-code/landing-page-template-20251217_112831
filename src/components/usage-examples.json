@@ -1,0 +1,48 @@
+{
+  "usage_examples": {
+    "hero_example": {
+      "component": "Hero",
+      "props": {
+        "headline": "Launch higher-converting campaigns, faster.",
+        "subheadline": "A professional template system for marketers who value speed and results.",
+        "background_media": {
+          "url": "hero-background.en.jpg",
+          "alt": "Abstract background representing innovation",
+          "focal_point": {
+            "x": 35,
+            "y": 50
+          }
+        },
+        "cta_text": "Start Building Now"
+      },
+      "variant": "with_image"
+    },
+    "feature_card_example": {
+      "component": "FeatureCard",
+      "props": {
+        "icon": {
+          "url": "feature-icon-0.svg",
+          "alt": "Icon representing visual editing capabilities"
+        },
+        "title": "Visual Editor",
+        "description": "Change colors, text, and layouts in a visual editor."
+      },
+      "variant": "icon_top",
+      "index": 0
+    },
+    "testimonial_example": {
+      "component": "Testimonial",
+      "props": {
+        "avatar": {
+          "url": "avatar-0.en.jpg",
+          "alt": "Portrait of Jamie Chen"
+        },
+        "quote": "This cut our launch time from weeks to hours.",
+        "author_name": "Jamie Chen",
+        "author_title": "Growth Lead"
+      },
+      "variant": "with_avatar",
+      "index": 0
+    }
+  }
+}

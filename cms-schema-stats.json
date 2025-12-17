@@ -1,0 +1,34 @@
+{
+  "schema_statistics": {
+    "total_fields": 49,
+    "field_types": {
+      "text": 29,
+      "richtext": 10,
+      "media": 10
+    },
+    "required_fields": 27,
+    "optional_fields": 22,
+    "components": {
+      "Hero": 4,
+      "FeatureCard": 12,
+      "Testimonial": 20,
+      "Form": 13
+    },
+    "validation_rules": {
+      "max_length_enabled": 39,
+      "i18n_keys": 39,
+      "alt_text_keys": 10
+    }
+  },
+  "compliance_check": {
+    "roadmap_requirements": {
+      "total_fields_38": false,
+      "features_4_instances": false,
+      "testimonials_5_instances": true,
+      "form_fields_6_instances": true,
+      "all_have_i18n_keys": true,
+      "media_fields_have_alt_text": true
+    },
+    "status": "NON_COMPLIANT"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "publishing_workflow": {
+    "preview_url_pattern": "{tenant_slug}.preview.template.io/{locale}/{page_slug}?preview=true",
+    "versioning_policy": {
+      "snapshots": "Each publish creates immutable snapshot",
+      "retention": "Max 100 versions retained per page",
+      "auto_pruning": "Oldest versions deleted when limit exceeded"
+    },
+    "rollback_instructions": {
+      "access": "Page history in CMS admin",
+      "steps": [
+        "Navigate to page history",
+        "Select target version",
+        "Click 'Restore This Version'",
+        "Confirm restoration"
+      ],
+      "permissions": "Editor or higher required",
+      "limitations": "Cannot rollback beyond 100 versions"
+    },
+    "approval_workflow": {
+      "enabled": true,
+      "roles": [
+        "Editor",
+        "Approver",
+        "Admin"
+      ],
+      "steps": [
+        {
+          "role": "Editor",
+          "action": "Submit for review",
+          "can_publish": false
+        },
+        {
+          "role": "Approver",
+          "action": "Approve or request changes",
+          "can_publish": true
+        },
+        {
+          "role": "Admin",
+          "action": "Publish immediately",
+          "can_publish": true
+        }
+      ]
+    },
+    "scheduled_publishing": {
+      "enabled": true,
+      "timezone": "User's timezone",
+      "minimum_advance": "5 minutes",
+      "maximum_future": "6 months"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "localization": {
+    "languages": [
+      {
+        "code": "en-US",
+        "name": "English (US)",
+        "dir": "LTR",
+        "priority": 1,
+        "default": true
+      },
+      {
+        "code": "ar-JO",
+        "name": "Arabic (Jordan)",
+        "dir": "RTL",
+        "priority": 2,
+        "default": false
+      }
+    ],
+    "text_expansion_rules": {
+      "headlines": {
+        "english_to_arabic": "33%",
+        "note": "Arabic requires more space for same meaning"
+      },
+      "body_text": {
+        "english_to_arabic": "25%",
+        "note": "Conservative estimate for body copy"
+      },
+      "cta_buttons": {
+        "english_to_arabic": "20-30%",
+        "note": "Call-to-action text may vary in length"
+      }
+    },
+    "pluralization_examples": [
+      {
+        "key": "cart_items_count",
+        "english": "You have {count, plural, =0 {no items} one {1 item} other {# items}} in your cart.",
+        "arabic": "لديك {count, plural, zero {لا توجد عناصر} one {عنصر واحد} two {عنصران} few {# عناصر} many {# عنصرًا} other {# عنصر}} في سلة التسوق.",
+        "icu_example": true
+      }
+    ]
+  }
+}

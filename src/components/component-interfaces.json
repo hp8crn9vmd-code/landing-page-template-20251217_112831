@@ -1,0 +1,39 @@
+{
+  "component_interfaces": {
+    "HeroProps": {
+      "headline": "string",
+      "subheadline": "string",
+      "background_media": "MediaObject",
+      "cta_text": "string",
+      "variant": "'with_video' | 'with_image' | 'with_carousel'"
+    },
+    "FeatureCardProps": {
+      "icon": "MediaObject",
+      "title": "string",
+      "description": "string",
+      "variant": "'icon_left' | 'icon_top' | 'icon_only'",
+      "index": "number"
+    },
+    "TestimonialProps": {
+      "avatar": "MediaObject | null",
+      "quote": "string",
+      "author_name": "string",
+      "author_title": "string | null",
+      "variant": "'with_avatar' | 'card' | 'simple'",
+      "index": "number"
+    },
+    "FormProps": {
+      "fields_labels": "string[]",
+      "fields_placeholders": "string[]",
+      "submit_button": "string"
+    },
+    "MediaObject": {
+      "url": "string",
+      "alt": "string",
+      "width": "number",
+      "height": "number",
+      "focal_point": "{x: number, y: number} | null",
+      "locale_variant": "string | null"
+    }
+  }
+}

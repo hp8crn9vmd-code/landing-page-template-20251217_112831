@@ -1,0 +1,137 @@
+{
+  "qa_testing": [
+    {
+      "test_name": "Pseudo-localization",
+      "type": "automated",
+      "description": "Test i18n implementation with placeholder text",
+      "criteria": "All i18n keys render expanded placeholder text without breaking layout or overflow",
+      "implementation": "Replace all translations with [##KEY##] pattern",
+      "acceptance_threshold": "100% of keys must render correctly",
+      "tools": [
+        "i18n testing library",
+        "visual regression"
+      ]
+    },
+    {
+      "test_name": "RTL Layout Mirror",
+      "type": "visual regression",
+      "description": "Verify RTL layout mirrors LTR correctly",
+      "criteria": "RTL screenshot matches mirrored LTR base within 1% pixel difference (excluding text)",
+      "implementation": "Automated screenshot comparison",
+      "acceptance_threshold": "99% pixel match",
+      "tools": [
+        "Playwright",
+        "PixelMatch",
+        "BackstopJS"
+      ]
+    },
+    {
+      "test_name": "Form Submission Security",
+      "type": "functional",
+      "description": "Test form security and validation",
+      "criteria": "Form rejects invalid email, respects rate limit, and triggers CAPTCHA when configured",
+      "test_cases": [
+        "Submit valid form data \u2192 success",
+        "Submit invalid email \u2192 validation error",
+        "Rapid submissions \u2192 rate limit enforced",
+        "Suspicious patterns \u2192 CAPTCHA triggered"
+      ],
+      "tools": [
+        "Cypress",
+        "Jest",
+        "Postman"
+      ]
+    },
+    {
+      "test_name": "Theme Override Application",
+      "type": "functional",
+      "description": "Test theme customization system",
+      "criteria": "Changes in Theme JSON are reflected live in preview and published site",
+      "test_cases": [
+        "Change primary color \u2192 updates immediately",
+        "Update font family \u2192 applies to all text",
+        "Modify spacing \u2192 layout adjusts",
+        "Save theme \u2192 persists across sessions"
+      ],
+      "tools": [
+        "Cypress",
+        "Visual regression"
+      ]
+    },
+    {
+      "test_name": "Performance Compliance",
+      "type": "automated",
+      "description": "Verify performance targets are met",
+      "criteria": "LCP < 2.5s, CLS < 0.1, JS < 150KB",
+      "implementation": "Automated Lighthouse runs in CI/CD",
+      "acceptance_threshold": "All metrics must pass 90% of runs",
+      "tools": [
+        "Lighthouse CI",
+        "WebPageTest"
+      ]
+    },
+    {
+      "test_name": "Accessibility Compliance",
+      "type": "automated + manual",
+      "description": "Verify WCAG 2.1 AA compliance",
+      "criteria": "Passes automated accessibility tests and manual screen reader testing",
+      "test_cases": [
+        "axe-core tests pass",
+        "Keyboard navigation works",
+        "Screen reader announces content correctly",
+        "Color contrast meets requirements"
+      ],
+      "tools": [
+        "axe-core",
+        "NVDA",
+        "VoiceOver",
+        "Keyboard testing"
+      ]
+    },
+    {
+      "test_name": "Cross-browser Compatibility",
+      "type": "visual regression",
+      "description": "Verify consistent rendering across browsers",
+      "criteria": "Layout and functionality consistent across Chrome, Firefox, Safari, Edge",
+      "browsers": [
+        "Chrome (latest 2 versions)",
+        "Firefox (latest 2 versions)",
+        "Safari (latest 2 versions)",
+        "Edge (latest 2 versions)"
+      ],
+      "tools": [
+        "BrowserStack",
+        "Sauce Labs",
+        "Playwright"
+      ]
+    },
+    {
+      "test_name": "Mobile Responsiveness",
+      "type": "visual regression",
+      "description": "Verify responsive design on mobile devices",
+      "criteria": "All components render correctly on mobile breakpoints",
+      "devices": [
+        "iPhone 12/13/14",
+        "Samsung Galaxy S21/S22",
+        "iPad Pro",
+        "Common tablet sizes"
+      ],
+      "tools": [
+        "Device emulation",
+        "Real device testing"
+      ]
+    }
+  ],
+  "testing_environment": {
+    "staging_url": "staging.template.io",
+    "preview_url": "preview.template.io",
+    "local_development": "localhost:3000",
+    "test_data": "Sample seed data provided in sample-seed-data.json"
+  },
+  "ci_cd_integration": {
+    "automated_tests": "Run on every pull request",
+    "performance_tests": "Daily scheduled runs",
+    "visual_regression": "Run on CSS/HTML changes",
+    "security_scans": "Weekly automated scans"
+  }
+}

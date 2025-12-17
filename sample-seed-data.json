@@ -1,0 +1,61 @@
+{
+  "seed_data": {
+    "hero": {
+      "headline": "Turn Visitors into Customers",
+      "subheadline": "A fully customizable template for marketers who move fast.",
+      "background_media": "hero-bg-default.jpg",
+      "cta_text": "Start Free Trial"
+    },
+    "features": [
+      {
+        "title": "Visual Editor",
+        "description": "Change colors, text, and layouts in a visual editor.",
+        "icon": "feature-icon-0.svg"
+      },
+      {
+        "title": "Built-in A/B Testing",
+        "description": "Test different headlines, images, and CTAs to optimize conversions.",
+        "icon": "feature-icon-1.svg"
+      },
+      {
+        "title": "Real-time Analytics",
+        "description": "Track performance with integrated analytics and conversion tracking.",
+        "icon": "feature-icon-2.svg"
+      },
+      {
+        "title": "Multi-language Support",
+        "description": "Launch pages in multiple languages with built-in localization tools.",
+        "icon": "feature-icon-3.svg"
+      }
+    ],
+    "testimonials": [
+      {
+        "quote": "This cut our launch time from weeks to hours.",
+        "author_name": "Jamie Chen",
+        "author_title": "Growth Lead"
+      },
+      {
+        "quote": "The customization options allowed us to match our brand perfectly.",
+        "author_name": "Alex Rodriguez",
+        "author_title": "Marketing Director"
+      }
+    ],
+    "form": {
+      "fields": [
+        {
+          "label": "Email Address",
+          "placeholder": "you@company.com"
+        },
+        {
+          "label": "Full Name",
+          "placeholder": "John Smith"
+        },
+        {
+          "label": "Company Name",
+          "placeholder": "Acme Inc."
+        }
+      ],
+      "submit_button": "Request Demo"
+    }
+  }
+}

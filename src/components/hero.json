@@ -1,0 +1,105 @@
+{
+  "component": "Hero",
+  "props": [
+    {
+      "field_name": "headline",
+      "type": "text",
+      "i18n_key": "hero_headline",
+      "max_length_en": 60,
+      "max_length_ar": 80,
+      "required": true,
+      "validation": "required, max_length",
+      "default_value": "Turn Visitors into Customers"
+    },
+    {
+      "field_name": "subheadline",
+      "type": "richtext",
+      "i18n_key": "hero_subheadline",
+      "max_length_en": 120,
+      "max_length_ar": 160,
+      "required": false,
+      "validation": "max_length",
+      "default_value": "A fully customizable template for marketers who move fast."
+    },
+    {
+      "field_name": "background_media",
+      "type": "media",
+      "alt_text_key": "hero_background_alt",
+      "required": true,
+      "validation": "image_or_video",
+      "default_value": "hero-bg-default.jpg",
+      "focal_point_spec": {
+        "x": "percentage",
+        "y": "percentage"
+      },
+      "locale_variants": [
+        "hero-background.en.jpg",
+        "hero-background.ar.jpg"
+      ],
+      "formats": [
+        "WebP",
+        "JPEG"
+      ],
+      "dimensions": {
+        "desktop": "1920\u00d71080px",
+        "mobile": "800\u00d7450px"
+      }
+    },
+    {
+      "field_name": "cta_text",
+      "type": "text",
+      "i18n_key": "hero_cta",
+      "max_length_en": 20,
+      "max_length_ar": 25,
+      "required": true,
+      "validation": "required, max_length",
+      "default_value": "Start Free Trial"
+    }
+  ],
+  "variants": [
+    {
+      "name": "with_video",
+      "description": "Hero with autoplay background video",
+      "props_override": {
+        "background_media": {
+          "type": "video",
+          "formats": [
+            "MP4",
+            "WebM"
+          ],
+          "max_duration": 30,
+          "autoplay": true,
+          "muted": true,
+          "loop": true
+        }
+      }
+    },
+    {
+      "name": "with_image",
+      "description": "Hero with static background image",
+      "props_override": {
+        "background_media": {
+          "type": "image",
+          "formats": [
+            "WebP",
+            "JPEG"
+          ],
+          "retina": true
+        }
+      }
+    },
+    {
+      "name": "with_carousel",
+      "description": "Hero with image carousel background",
+      "props_override": {
+        "background_media": {
+          "type": "image_array",
+          "min_items": 2,
+          "max_items": 5,
+          "autoplay_interval": 5000
+        }
+      }
+    }
+  ],
+  "description": "Main hero section with headline, subheadline, background media, and CTA"
+}
